@@ -17,7 +17,3 @@ spec:
         image: mariadb:10.10
         ports:
         - containerPort: 3306 
-        env:
-        #- name: MARIADB_RANDOM_ROOT_PASSWORD
-        - name: MARIADB_ALLOW_EMPTY_ROOT_PASSWORD
-          value: "0" # if it is 1 and root_password is set, root_password takes precedance
