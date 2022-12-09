@@ -32,5 +32,6 @@ spec:
             - name: KC_DB_PASSWORD
               valueFrom:
                 secretKeyRef:
+                  name: keycloak-secret
                   key: dbpassword
           name: keycloak
