@@ -13,6 +13,8 @@ spec:
             secretKeyRef:
               name: keycloak-secret
               key: dbpassword
+        - name: MARIADB_DATABASE
+          value: keycloak
               
         volumeMounts:
         - name: mariadb-pv
