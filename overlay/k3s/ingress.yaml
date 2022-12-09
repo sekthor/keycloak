@@ -12,7 +12,7 @@ spec:
   tls:
   - hosts:
     - dev.keycloak.crp.sekthor.ch
-    secretName: minio-tls-cert
+    secretName: keycloak-tls-cert
   rules:
     - host: dev.keycloak.crp.sekthor.ch
       http:

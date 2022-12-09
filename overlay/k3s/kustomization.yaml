@@ -13,3 +13,4 @@ resources:
 
 patches:
   - db-patch.yaml
+  - keycloak-patch.yaml
