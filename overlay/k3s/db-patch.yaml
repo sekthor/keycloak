@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: keycloak-database
+spec:
+  template:
+    spec:
+      containers:
+      - name: mariadb
+        env:
+        - name: MARIADB_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: keycloak-secret
+              key: dbpassword
+              
+        volumeMounts:
+        - name: mariadb-pv
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: mariadb-pv
+        persistentVolumeClaim:
+          claimName: dev-keycloak-database

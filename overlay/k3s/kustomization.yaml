@@ -8,3 +8,8 @@ bases:
 resources:
   - namespace.yaml
   - ingress.yaml
+  - pv.yaml
+  - pvc.yaml
+
+patches:
+  - db-patch.yaml
