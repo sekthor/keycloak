@@ -21,4 +21,16 @@ spec:
                 secretKeyRef:
                   name: keycloak-secret
                   key: kcpassword
+            - name: KC_DB
+              value: mariadb
+            - name: KC_DB_URL_HOST
+              value: keycloak-database
+            - name: KC_DB_SCHEMA
+              value: keycloak
+            - name: KC_DB_USERNAME
+              value: root
+            - name: KC_DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: dbpassword
           name: keycloak
