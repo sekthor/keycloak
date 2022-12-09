@@ -10,6 +10,8 @@ resources:
   - ingress.yaml
   - pv.yaml
   - pvc.yaml
+  - theme-pv.yaml
+  - theme-pvc.yaml
 
 patches:
   - db-patch.yaml

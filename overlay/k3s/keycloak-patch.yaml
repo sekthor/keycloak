@@ -35,3 +35,10 @@ spec:
                   name: keycloak-secret
                   key: dbpassword
           name: keycloak
+          volumeMounts:
+            - name: themes
+              mountPath: /opt/keycloak/themes
+      volumes:
+      - name: themes
+        persistentVolumeClaim:
+          claimName: dev-keycloak-themes
