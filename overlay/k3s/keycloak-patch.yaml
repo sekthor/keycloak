@@ -10,11 +10,13 @@ spec:
             - start-dev
           env:
             - name: KEYCLOAK_ADMIN
+              value: ""
               valueFrom:
                 secretKeyRef:
                   name: keycloak-secret
                   key: kcadmin
             - name: KEYCLOAK_ADMIN_PASSWORD
+              value: ""
               valueFrom:
                 secretKeyRef:
                   name: keycloak-secret
