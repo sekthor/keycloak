@@ -3,5 +3,6 @@ kind: Kustomization
 
 bases:
   - https://raw.githubusercontent.com/keycloak/keycloak-quickstarts/20.0.1/kubernetes-examples/keycloak.yaml
+  - svc-patch.yaml
   - db.yaml
   - db-svc.yaml
